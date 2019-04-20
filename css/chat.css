@@ -106,9 +106,26 @@ body {
 }
 
 #chat-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     grid-area: chat-title;
+    color: #0048AA;
+    font-weight: bold;
+    font-size: 2.0rem;
     border-radius: 0 10px 0 0;
-    box-shadow: 0 1px 3px -1px rgba(0,0,0, 0.75);
+    box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
+    padding: 0 20px;
+}
+
+#chat-title > img,
+#chat-form > img {
+    cursor: pointer;
+}
+
+#chat-title > img {
+    width: 36px;
+    height: 36px;
 }
 
 #chat-message-list {
@@ -116,7 +133,27 @@ body {
 }
 
 #chat-form {
+    display: flex;
+    align-items: center;
     grid-area: chat-form;
     border-top: 1px solid rgba(0,0,0, 0.25);
     border-radius: 0 0 10px 0;
+    padding-left: 42px;
+    padding-right: 22px;
+}
+
+#chat-form > img {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+}
+
+#chat-form input {
+    flex: 1 0 0;
+    outline: none;
+    padding: 15px;
+    border: 2px solid #ddd;
+    color: #330;
+    border-radius: 6px;
+    font-size: 1.4rem;
 }
