@@ -22,6 +22,12 @@ body {
 }
 
 #chat-container {
+    display: grid;
+    grid:
+        'search-container chat-title' 71px
+        'conversation-list chat-message-list' 1fr
+        'new-message-container chat-form' 78px
+        / 275px 1fr;
     min-width: 800px;
     max-width: 1000px;
     max-height: 800px;
@@ -29,4 +35,47 @@ body {
     height: 95vh;
     background: #FFF;
     border-radius: 10px;
+}
+
+#search-container,
+#conversation-list,
+#new-message-container {
+    background: #0048AA;
+}
+
+#search-container {
+    grid-area: search-container;
+    border-radius: 10px 0 0 0;
+    box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
+    z-index: 1;
+}
+
+#conversation-list {
+    grid-area: conversation-list;
+}
+
+#new-message-container {
+    grid-area: new-message-container;
+    border-top: 1px solid rgba(0,0,0,0.25);
+    border-radius: 0 0 0 10px;
+}
+
+#chat-title,
+#chat-form {
+    background: #eee;
+}
+
+#chat-title {
+    grid-area: chat-title;
+    box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
+}
+
+#chat-message-list {
+    grid-area: chat-message-list;
+}
+
+#chat-form {
+    grid-area: chat-form;
+    border-radius: 0 0 10px 0;
+    border-top: 1px solid rgba(0,0,0,0.25);
 }
