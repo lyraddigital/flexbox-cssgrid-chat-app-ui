@@ -184,7 +184,18 @@ body {
 }
 
 .message-row {
+    display: grid;
+    grid-template-columns: 70%;
     margin-bottom: 20px;
+}
+
+.you-message {
+    justify-content: end;
+    justify-items: end;
+}
+
+.other-message {
+    justify-items: start;
 }
 
 .message-time {
