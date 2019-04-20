@@ -178,6 +178,38 @@ body {
 
 #chat-message-list {
     grid-area: chat-message-list;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0 20px;
+}
+
+.message-row {
+    margin-bottom: 20px;
+}
+
+.message-time {
+    font-size: 1.3rem;
+    color: #777;
+}
+
+.message-text {
+    padding: 9px 14px;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.you-message .message-text {
+    background: #0048AA;
+    color: #eee;
+    border: 1px solid #0048AA;
+    border-radius: 14px 14px 0 14px;
+}
+
+.other-message .message-text {
+    background: #eee;
+    color: #111;
+    border: 1px solid #ddd;
+    border-radius: 14px 14px 14px 0;
 }
 
 #chat-form {
