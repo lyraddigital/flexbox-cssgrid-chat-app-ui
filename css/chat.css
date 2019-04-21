@@ -181,6 +181,7 @@ body {
     display: flex;
     flex-direction: column-reverse;
     padding: 0 20px;
+    overflow-y: scroll;
 }
 
 .message-row {
@@ -189,13 +190,26 @@ body {
     margin-bottom: 20px;
 }
 
+.message-content {
+    display: grid;
+}
+
 .you-message {
     justify-content: end;
+}
+
+.you-message .message-content{
     justify-items: end;
 }
 
-.other-message {
-    justify-items: start;
+.other-message .message-content {
+    grid-template-columns: 48px 1fr;
+    grid-column-gap: 15px;
+}
+
+.message-row img {
+    border-radius: 100%;
+    grid-row: span 2;
 }
 
 .message-time {
